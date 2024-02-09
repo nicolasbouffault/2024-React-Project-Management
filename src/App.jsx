@@ -10,12 +10,14 @@ function App() {
     return (
         <div className="flex project-app">
             <ProjectsSidebar onAddProject={handleAddProject} />
-            <div className="w-4/5 flex flex-col text-center items-center main-content pt-44">
-                <img
-                    className="w-16"
-                    src="/src/assets/no-projects.png"
-                    alt=""
-                />
+            <div className="w-4/5 text-center main-content pt-44 pl-10 pr-56">
+                <div className="logo-image flex justify-center">
+                    <img
+                        className="w-16"
+                        src="/src/assets/no-projects.png"
+                        alt=""
+                    />
+                </div>
                 <h2 className="text-2xl text-black/60 font-bold mb-4 mt-4">
                     No Project Selected
                 </h2>
