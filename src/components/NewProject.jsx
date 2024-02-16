@@ -5,7 +5,7 @@ export default function NewProject() {
         <div className="new-project-form-container">
             <form onSubmit={(e) => e.preventDefault()}>
                 <div className="new-project-form-ctas flex justify-end gap-4 pb-4">
-                    <button>Cancel</button>
+                    <button type="button">Cancel</button>
                     <button
                         type="submit"
                         className="btn rounded-lg bg-black text-white hover:text-white py-2 px-6 relative"

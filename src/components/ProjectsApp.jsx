@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import ProjectsSidebar from "./ProjectsSidebar";
 import ProjectsMain from "./ProjectsMain";
+import ProjectsSidebar from "./ProjectsSidebar";
 
 export default function ProjectsApp() {
-  const handleAddProject = () => {
-    console.log("hey");
-  };
+    const [isCreateFormActive, setIsCreateFormActive] = useState(false);
+    const [projects, setProjects] = useState([]);
 
-  const [projects, setProjects] = useState([]);
+    const handleAddProject = () => {
+        setIsCreateFormActive(true);
+    };
 
-  return (
-    <div className="flex project-app">
-      <ProjectsSidebar onAddProject={handleAddProject} />
-      <ProjectsMain onAddProject={handleAddProject} allProjects={projects} />
-    </div>
-  );
+    return (
+        <div className="flex project-app">
+            <ProjectsSidebar onAddProject={handleAddProject} />
+            <ProjectsMain
+                onAddProject={handleAddProject}
+                allProjects={projects}
+                showCreateForm={isCreateFormActive}
+            />
+        </div>
+    );
 }
